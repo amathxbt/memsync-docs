@@ -9,7 +9,7 @@ Import chat histories from various platforms to automatically extract and store 
 <RequestExample>
 
 ```bash cURL
-curl -X POST 'https://api.memsync.ai/integrations/chat' \
+curl -X POST 'https://api.memchat.io/integrations/chat' \
   -H 'X-API-Key: YOUR_API_KEY' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -33,7 +33,7 @@ curl -X POST 'https://api.memsync.ai/integrations/chat' \
 ```python Python
 import requests
 
-url = "https://api.memsync.ai/integrations/chat"
+url = "https://api.memchat.io/integrations/chat"
 headers = {
     "X-API-Key": "YOUR_API_KEY",
     "Content-Type": "application/json"
@@ -61,7 +61,7 @@ result = response.json()
 ```
 
 ```javascript JavaScript
-const response = await fetch('https://api.memsync.ai/integrations/chat', {
+const response = await fetch('https://api.memchat.io/integrations/chat', {
   method: 'POST',
   headers: {
     'X-API-Key': 'YOUR_API_KEY',

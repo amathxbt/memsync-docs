@@ -39,7 +39,7 @@ headers = {
 }
 
 # Example API call
-response = requests.post("https://api.memsync.ai/v1/memories/search",
+response = requests.post("https://api.memchat.io/v1/memories/search",
     headers=headers,
     json={"query": "user interests", "limit": 5}
 )
@@ -142,7 +142,7 @@ MemSync automatically associates API requests with your account:
 # - Data isolation
 # - Access permissions
 
-response = requests.post("https://api.memsync.ai/v1/memories",
+response = requests.post("https://api.memchat.io/v1/memories",
     headers={"X-API-Key": "YOUR_API_KEY"},
     json={
         "messages": [...],
@@ -220,7 +220,7 @@ response = requests.post("https://api.memsync.ai/v1/memories",
 class MemSyncClient:
     def __init__(self, api_key):
         self.api_key = api_key
-        self.base_url = "https://api.memsync.ai/v1"
+        self.base_url = "https://api.memchat.io/v1"
         self.headers = {
             "X-API-Key": api_key,
             "Content-Type": "application/json"
@@ -246,7 +246,7 @@ memories = client.search_memories("user interests")
 class MemSyncClient {
   constructor(apiKey) {
     this.apiKey = apiKey;
-    this.baseUrl = 'https://api.memsync.ai/v1';
+    this.baseUrl = 'https://api.memchat.io/v1';
     this.headers = {
       'X-API-Key': apiKey,
       'Content-Type': 'application/json'
@@ -282,7 +282,7 @@ def test_authentication(api_key):
     """Test if your API key is valid"""
     headers = {"X-API-Key": api_key}
     
-    response = requests.get("https://api.memsync.ai/healthcheck", headers=headers)
+    response = requests.get("https://api.memchat.io/healthcheck", headers=headers)
     
     if response.status_code == 200:
         print("✅ Authentication successful")
@@ -316,7 +316,7 @@ def debug_auth_issues(api_key):
     # Test the API key
     try:
         headers = {"X-API-Key": api_key}
-        response = requests.get("https://api.memsync.ai/healthcheck", headers=headers)
+        response = requests.get("https://api.memchat.io/healthcheck", headers=headers)
         
         if response.status_code == 200:
             print("✅ API key is valid")

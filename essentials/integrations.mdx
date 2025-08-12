@@ -33,7 +33,7 @@ Import professional information, posts, and network data from LinkedIn profiles.
 import requests
 
 # Index LinkedIn profile data
-response = requests.post("https://api.memsync.ai/v1/integrations/index/social",
+response = requests.post("https://api.memchat.io/v1/integrations/index/social",
     headers={"Authorization": "Bearer YOUR_TOKEN"},
     json={
         "type": "LINKEDIN",
@@ -64,7 +64,7 @@ Import tweets, interactions, and profile information.
 
 ```python
 # Index Twitter profile data
-response = requests.post("https://api.memsync.ai/v1/integrations/index/social",
+response = requests.post("https://api.memchat.io/v1/integrations/index/social",
     headers={"Authorization": "Bearer YOUR_TOKEN"},
     json={
         "type": "TWITTER",
@@ -93,7 +93,7 @@ Import posts, comments, and subreddit activity.
 
 ```python
 # Index Reddit activity
-response = requests.post("https://api.memsync.ai/v1/integrations/index/social",
+response = requests.post("https://api.memchat.io/v1/integrations/index/social",
     headers={"Authorization": "Bearer YOUR_TOKEN"},
     json={
         "type": "REDDIT",
@@ -124,7 +124,7 @@ Process various document formats to extract meaningful information.
 
 ```python
 # Index document content
-response = requests.post("https://api.memsync.ai/v1/integrations/index/file",
+response = requests.post("https://api.memchat.io/v1/integrations/index/file",
     headers={"Authorization": "Bearer YOUR_TOKEN"},
     json={
         "type": "FILE",
@@ -239,7 +239,7 @@ Import conversation history from ChatGPT to understand user interaction patterns
 
 ```python
 # Index ChatGPT conversation history
-response = requests.post("https://api.memsync.ai/v1/integrations/index/chat",
+response = requests.post("https://api.memchat.io/v1/integrations/index/chat",
     headers={"Authorization": "Bearer YOUR_TOKEN"},
     json={
         "type": "CHATGPT",
@@ -282,7 +282,7 @@ chat_data = {
 }
 
 # Upload and process
-response = requests.post("https://api.memsync.ai/v1/integrations/index/chat",
+response = requests.post("https://api.memchat.io/v1/integrations/index/chat",
     headers={"Authorization": "Bearer YOUR_TOKEN"},
     json={
         "type": "CHATGPT",  # Use CHATGPT type for custom formatted data
@@ -322,7 +322,7 @@ All integrations are processed asynchronously to handle large datasets efficient
 ```python
 # Check integration status
 def check_integration_status(task_id):
-    response = requests.get(f"https://api.memsync.ai/v1/integrations/status/{task_id}",
+    response = requests.get(f"https://api.memchat.io/v1/integrations/status/{task_id}",
         headers={"Authorization": "Bearer YOUR_TOKEN"}
     )
     

@@ -62,7 +62,7 @@ def search_memories(query, user_id, limit=10, rerank=True):
 import requests
 
 # Find work-related information
-response = requests.post("https://api.memsync.ai/v1/memories/search", 
+response = requests.post("https://api.memchat.io/v1/memories/search", 
     headers={"Authorization": "Bearer YOUR_TOKEN"},
     json={
         "query": "What does the user do for work?",
@@ -71,7 +71,7 @@ response = requests.post("https://api.memsync.ai/v1/memories/search",
 )
 
 # Find hobbies and interests
-response = requests.post("https://api.memsync.ai/v1/memories/search",
+response = requests.post("https://api.memchat.io/v1/memories/search",
     headers={"Authorization": "Bearer YOUR_TOKEN"}, 
     json={
         "query": "What are the user's hobbies?",

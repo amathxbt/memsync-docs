@@ -1,6 +1,6 @@
 ---
 title: "Store Memories"
-api: "POST https://api.memsync.ai/v1/memories"
+api: "POST https://api.memchat.io/v1/memories"
 description: "Extract and store memories from conversation messages"
 ---
 
@@ -79,7 +79,7 @@ Store and process conversation messages to extract meaningful memories. MemSync 
 <RequestExample>
 
 ```bash cURL
-curl -X POST "https://api.memsync.ai/v1/memories" \
+curl -X POST "https://api.memchat.io/v1/memories" \
   -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -141,13 +141,13 @@ data = {
     }
 }
 
-response = requests.post("https://api.memsync.ai/v1/memories", 
+response = requests.post("https://api.memchat.io/v1/memories", 
                         headers=headers, json=data)
 print(response.json())
 ```
 
 ```javascript JavaScript
-const response = await fetch('https://api.memsync.ai/v1/memories', {
+const response = await fetch('https://api.memchat.io/v1/memories', {
   method: 'POST',
   headers: {
     'X-API-Key': 'YOUR_API_KEY',

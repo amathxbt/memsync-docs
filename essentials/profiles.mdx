@@ -228,7 +228,7 @@ MemSync infers personality traits and characteristics from user behavior pattern
 import requests
 
 # Get complete user profile
-response = requests.get("https://api.memsync.ai/v1/users/profile",
+response = requests.get("https://api.memchat.io/v1/users/profile",
     headers={"Authorization": "Bearer YOUR_TOKEN"}
 )
 
@@ -355,7 +355,7 @@ Users have control over their profile information:
 ```python
 # Allow users to override auto-generated bio
 def update_user_bio(user_id, custom_bio):
-    response = requests.put("https://api.memsync.ai/v1/users/bio",
+    response = requests.put("https://api.memchat.io/v1/users/bio",
         headers={"Authorization": "Bearer YOUR_TOKEN"},
         json={"user_bio": custom_bio}
     )

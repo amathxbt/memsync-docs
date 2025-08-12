@@ -12,7 +12,7 @@ The MemSync REST API provides programmatic access to memory management, user pro
 All API requests should be made to:
 
 ```
-https://api.memsync.ai/v1
+https://api.memchat.io/v1
 ```
 
 ## Authentication
@@ -42,7 +42,7 @@ headers = {
 }
 
 # Store a conversation
-response = requests.post("https://api.memsync.ai/v1/memories",
+response = requests.post("https://api.memchat.io/v1/memories",
     headers=headers,
     json={
         "messages": [
@@ -59,7 +59,7 @@ print(response.json())
 ```
 
 ```javascript JavaScript
-const response = await fetch('https://api.memsync.ai/v1/memories', {
+const response = await fetch('https://api.memchat.io/v1/memories', {
   method: 'POST',
   headers: {
     'X-API-Key': 'YOUR_API_KEY',
@@ -81,7 +81,7 @@ console.log(result);
 ```
 
 ```bash cURL
-curl -X POST "https://api.memsync.ai/v1/memories" \
+curl -X POST "https://api.memchat.io/v1/memories" \
   -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -365,7 +365,7 @@ def get_all_memories(headers):
     page = 1
     
     while True:
-        response = requests.get(f"https://api.memsync.ai/v1/memories",
+        response = requests.get(f"https://api.memchat.io/v1/memories",
             headers=headers,
             params={"page": page, "page_size": 50}
         )
