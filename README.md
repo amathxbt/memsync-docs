@@ -29,6 +29,19 @@ The documentation will be available at `http://localhost:3000`.
 - If the dev environment isn't running - Run `npm install` to re-install dependencies.
 
 ## Contributing
+### Troubleshooting
+
+#### Windows Installation
+If you are on Windows and encounter errors installing dependencies, we recommend using **WSL (Windows Subsystem for Linux)**. 
+1. Run `wsl --install` in PowerShell.
+2. Restart and install the requirements within the WSL terminal.
+
+#### Dependency Conflicts
+If `npm install` fails, try clearing your cache:
+```bash
+npm cache clean --force
+rm -rf node_modules
+npm install
 
 When contributing to the documentation:
 
