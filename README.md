@@ -42,6 +42,12 @@ If `npm install` fails, try clearing your cache:
 npm cache clean --force
 rm -rf node_modules
 npm install
+#### Authentication Loops (401 Unauthorized)
+If you are repeatedly asked to log in or see 401 errors:
+1. Clear browser cookies for `memsync.ai`.
+2. Ensure the extension has permissions for your specific AI site (ChatGPT, Claude, etc.).
+3. Log out and back in via the MemSync dashboard to refresh your session.
+
 
 When contributing to the documentation:
 
